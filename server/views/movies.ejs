@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link type="text/css" href="/server/public/css/output.css" rel="stylesheet">      
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lightslider/1.1.6/js/lightslider.min.js"></script>   
+    <link type="text/css" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightslider/1.1.6/css/lightslider.css" />                  
+
+</head>
+<body>
+  <%- include('_nav.ejs'); %>
+
+<div class="bg-cover bg-[center_bottom_32rem] w-screen h-96 align-top absolute top-0 left-0 -z-10 brightness-[0.35] <% if (data.backdrop_path == null){%> <%="bg-black"%> <% }; %>" style="background-image: url('https://www.themoviedb.org/t/p/original<%= data.backdrop_path %>') ">
+</div>
+<div class="w-screen h-96 align-top">
+  <div class="flex flex-wrap flex-col w-full sm:w-9/12 sm:m-auto pt-32 sm:pt-48">
+    <div class="flex flex-wrap flex-row sm:rounded-3xl sm:w-full justify-center sm:justify-start">
+      <img class="rounded-2xl w-56 h-fit shadow-lg shadow-slate-500" src="https://www.themoviedb.org/t/p/w600_and_h900_bestv2<%= data.poster_path %>" alt="<%= data.title %>"> 
+      <div class="flex flex-col w-9/12 text-black sm:justify-start">
+        <div class="flex flex-row mt-3 m-auto sm:m-0">
+            <h3 class="text-3xl sm:text-white sm:pl-8"><%= data.title %></h3>
+            <div class="flex items-center ">
+            <a href="https://www.imdb.com/title/<%=  data.imdb_id %>/" target="_blank" class=" bg-yellow-400 h-8 rounded-md ml-4 pl-1 pr-1 pt-0 pb-0 font-bold">IMDb</a>
+            </div>
+        </div>
+        <div class="flex flex-row pb-5 sm:text-white sm:pb-0">
+          <p class="sm:pl-8"><%= data.vote_average %></p>
+          <p class="pl-4">
+            <% data.genres.forEach(data => { %>
+                <%= data.name %>
+            <% }) %>
+          </p>
+          <p class="pl-4"><%= data.runtime %> dakika</p>
+        </div>
+        <div>
+          <ul class="flex pl-8 pt-2">
+            <li>
+              <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="star" class="w-4 text-yellow-500 mr-1" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512">
+                <path fill="currentColor" d="M259.3 17.8L194 150.2 47.9 171.5c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.3 23.2 46 46.4 33.7L288 439.6l130.7 68.7c23.2 12.2 50.9-7.4 46.4-33.7l-25-145.5 105.7-103c19-18.5 8.5-50.8-17.7-54.6L382 150.2 316.7 17.8c-11.7-23.6-45.6-23.9-57.4 0z"></path>
+              </svg>
+            </li>
+            <li>
+              <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="star" class="w-4 text-yellow-500 mr-1" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512">
+                <path fill="currentColor" d="M259.3 17.8L194 150.2 47.9 171.5c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.3 23.2 46 46.4 33.7L288 439.6l130.7 68.7c23.2 12.2 50.9-7.4 46.4-33.7l-25-145.5 105.7-103c19-18.5 8.5-50.8-17.7-54.6L382 150.2 316.7 17.8c-11.7-23.6-45.6-23.9-57.4 0z"></path>
+              </svg>
+            </li>
+            <li>
+              <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="star" class="w-4 text-yellow-500 mr-1" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512">
+                <path fill="currentColor" d="M259.3 17.8L194 150.2 47.9 171.5c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.3 23.2 46 46.4 33.7L288 439.6l130.7 68.7c23.2 12.2 50.9-7.4 46.4-33.7l-25-145.5 105.7-103c19-18.5 8.5-50.8-17.7-54.6L382 150.2 316.7 17.8c-11.7-23.6-45.6-23.9-57.4 0z"></path>
+              </svg>
+            </li>
+            <li>
+              <svg aria-hidden="true" focusable="false" data-prefix="far" data-icon="star" class="w-4 text-yellow-500 mr-1" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512">
+                <path fill="currentColor" d="M528.1 171.5L382 150.2 316.7 17.8c-11.7-23.6-45.6-23.9-57.4 0L194 150.2 47.9 171.5c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.3 23.2 46 46.4 33.7L288 439.6l130.7 68.7c23.2 12.2 50.9-7.4 46.4-33.7l-25-145.5 105.7-103c19-18.5 8.5-50.8-17.7-54.6zM388.6 312.3l23.7 138.4L288 385.4l-124.3 65.3 23.7-138.4-100.6-98 139-20.2 62.2-126 62.2 126 139 20.2-100.6 98z"></path>
+              </svg>
+            </li>
+            <li>
+              <svg aria-hidden="true" focusable="false" data-prefix="far" data-icon="star" class="w-4 text-yellow-500" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512">
+                <path fill="currentColor" d="M528.1 171.5L382 150.2 316.7 17.8c-11.7-23.6-45.6-23.9-57.4 0L194 150.2 47.9 171.5c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.3 23.2 46 46.4 33.7L288 439.6l130.7 68.7c23.2 12.2 50.9-7.4 46.4-33.7l-25-145.5 105.7-103c19-18.5 8.5-50.8-17.7-54.6zM388.6 312.3l23.7 138.4L288 385.4l-124.3 65.3 23.7-138.4-100.6-98 139-20.2 62.2-126 62.2 126 139 20.2-100.6 98z"></path>
+              </svg>
+            </li>
+          </ul>
+        </div>
+        <div class="flex flex-row sm:mt-[4.5rem]">
+          <p class="sm:pl-8 text-justify text-black"><%= data.overview %></p>
+        </div>
+<div class="flex flex-wrap mt-6">
+  <div class="flex-row sm:flex items-center">
+    <div class="sm:ml-8 flex-row">
+      <div class="mb-2">Yönetmen</div>
+      <div class="flex items-center">
+        <div class="flex items-center justify-center h-10 w-10 shadow-slate-500 shadow-lg object-cover	rounded-full overflow-hidden">
+          <img class="p-[1px]" src="https://www.themoviedb.org/t/p/w200<%= crew.director[0].url %>">
+        </div>
+        <div class="ml-2"> <%= crew.director[0]?.name %> </div>
+      </div>
+    </div>
+    <div class="sm:ml-5 flex-row">
+      <div class="sm:mb-2 sm:ml-2">Yazar</div>
+        <div class="flex items-center">
+          <% if (crew.screenplay[1]) { %>
+            <% for(i=0; i < 2; i++) { %>
+              <div class="sm:ml-2 flex items-center justify-center h-10 w-10 shadow-slate-500 shadow-lg object-cover	rounded-full overflow-hidden">
+                <img class="p-[1px]" src="https://www.themoviedb.org/t/p/w200<%= crew.writer[i]?.url %>">
+              </div>
+              <div class="ml-2"> <%= crew.writer[i]?.name %> </div>            
+            <% } %>
+          <%} else { %>
+              <div class="sm:ml-2 flex items-center justify-center h-10 w-10 shadow-slate-500 shadow-lg object-cover	rounded-full overflow-hidden">
+                <img class="p-[1px]" src="https://www.themoviedb.org/t/p/w200<%= crew.writer[0]?.url %>">
+              </div>
+              <div class="ml-2"> <%= crew.writer[0]?.name %> </div>            
+          <% } %>
+           
+      </div>
+    </div>
+    <div class="sm:ml-5 flex-row">
+      <% if (crew.screenplay[0]){ %> 
+      <div class="sm:mb-2 sm:ml-2">Senaryo</div>
+      <% } %> 
+        <div class="flex items-center">
+          <% for(i=0; i < 2; i++) { %>
+              <% if (crew.screenplay[i]){ %> 
+              <div class="sm:ml-2 flex items-center justify-center h-10 w-10 shadow-slate-500 shadow-lg object-cover	rounded-full overflow-hidden">
+                <img class="p-[1px]" src="https://www.themoviedb.org/t/p/w200<%= crew.screenplay[i]?.url %>">
+              </div>
+              <div class="ml-2"> <%= crew.screenplay[i]?.name %> </div>
+          <% }} %> 
+      </div>
+    </div>
+  </div>
+</div>
+</div>          
+</div>
+
+    <p class="m-4 text-center underline decoration-pink-500"><%= data.tagline %></p>
+
+    <div class="mb-6"> Top Cast </div>
+    <div class="flex flex-wrap gap-4 justify-center sm:justify-start">
+      <% for(i=0; i < 6; i++) { %>
+      <a class="w-24 sm:w-32 rounded-xl overflow-hidden shadow-slate-500 shadow-lg my-5 transform translate-y-4 hover:translate-y-0 duration-500 ease-in-out" href="">
+        <img alt="" src="https://www.themoviedb.org/t/p/w600_and_h900_bestv2<%= credits.cast[i].profile_path %>">
+        <div class="bg-orange-200 bg-opacity-70  h-full p-2 pt-1">
+          <p class="text-xs sm:text-sm font-bold"><%= credits.cast[i].name %></p>
+          <p class="text-xs"><%= credits.cast[i].character %></p>
+        </div>
+      </a>
+      <% } %> 
+    </div>
+
+    <!-- carousel -->
+    <p class="text-center text-2xl p-8">Önerilen Filmler</p>
+
+    <div class="bg-slate-800 rounded-3xl w-4/6 m-auto sm:w-full flex ">
+      <ul id="lightSlider" class="">
+          <% recommendedMovies.results.forEach(item => { %>
+              <li class="justify-start">
+                  <img class=" ml-auto mr-auto rounded-xl sm:w-36 sm:mt-3 sm:mb-3" src="https://www.themoviedb.org/t/p/w600_and_h900_bestv2<%= item.poster_path %>" alt="<%= data.title %>"> 
+              </li> 
+            <% }) %>
+      </ul>
+    </div>
+
+</div>
+</div>
+
+
+            <!-- <blockquote class="text-2xl font-semibold italic text-center text-slate-900">
+                You're an                
+                <span class="relative">
+                  <span class="block absolute -inset-1 -skew-y-3 bg-slate-700" aria-hidden="true"></span>
+                  <span class="relative text-white">errand boy</span>
+                </span>
+                sent by grocery clerks       
+            </blockquote> -->
+
+            <!-- <script src="https://unpkg.com/flowbite@1.3.4/dist/flowbite.js"></script> -->
+
+<script type="text/javascript">
+    $(document).ready(function() {
+      $("#lightSlider").lightSlider({
+        item: 5,
+        autoWidth: false,
+        slideMove: 2, // slidemove will be 1 if loop is true
+        easing: 'cubic-bezier(0.25, 0, 0.25, 1)',
+        slideMargin: 0,
+        enableTouch:true,
+
+        speed: 400, //ms'
+        auto: true,
+        pauseOnHover: true,
+        loop: true,
+        slideEndAnimation: true,
+        pause: 3000,
+        responsive : [
+        {
+                breakpoint:1280,
+                settings: {
+                    item:4,
+                    slideMove:1,
+                    slideMargin:6,
+                  }
+            },
+            {
+                breakpoint:800,
+                settings: {
+                    item:2,
+                    slideMove:1,
+                    slideMargin:6,
+                  }
+            },
+            {
+                breakpoint:480,
+                settings: {
+                    item:1,
+                    slideMove:1
+                  }
+            }
+        ]
+      }); 
+    });
+  </script>
+
+</body>
+
+
+</html>
