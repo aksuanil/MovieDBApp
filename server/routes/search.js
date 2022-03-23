@@ -4,7 +4,6 @@ import axios from 'axios';
 const searchRouter = express.Router();
 const apiKey = "946d32131d3e345d057d1d753c5c8a06";
 const searchMovieApiURI = "https://api.themoviedb.org/3/search/movie?api_key=946d32131d3e345d057d1d753c5c8a06&language=en-US&query=";
-const getMovieDetailApiURI = "https://api.themoviedb.org/3/movie/614917?api_key=946d32131d3e345d057d1d753c5c8a06&language=en-US"
 
 let searchResults = [];
 let apiDetailData = [];
