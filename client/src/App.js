@@ -1,6 +1,4 @@
 import React, { useEffect, useState } from "react";
-import Header from "./components/Header";
-import MovieSlider from "./components/MovieSlider";
 import { Route, Routes} from "react-router-dom";
 import TopRated from "./TopRated"
 import HomePage from "./HomePage"
@@ -22,4 +20,5 @@ function App() {
         </>
     )
 }
+export const serverPath = 'https://moviedb-app-server.herokuapp.com/'
 export default App;

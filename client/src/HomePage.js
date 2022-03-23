@@ -6,16 +6,17 @@ import CategoryBar from "./components/CategoryBar";
 import { useParams } from "react-router-dom";
 import Loader from "./components/Loader";
 import Footer from "./components/Footer"
+import { serverPath } from "./App";
 
 export default function HomePage() {
   const fetchPopular = async ()=> {
-    const response = await fetch("/main");
+    const response = await fetch(serverPath+"main");
     return response.json();
   }
   const {data, status} = useQuery('popular', fetchPopular);
 
   const fetchGenre = async ()=> {
-    const response = await fetch(`movies/getMoviesByGenre/${id}`);
+    const response = await fetch(`${serverPath}movies/getMoviesByGenre/${id}`);
     return response.json();
   }
   const [id, setData] = useState(0);

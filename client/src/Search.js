@@ -4,12 +4,13 @@ import { useQuery } from "react-query";
 import SearchCard from "./components/SearchCard";
 import Loader from "./components/Loader";
 import { useSearchParams } from "react-router-dom";
+import { serverPath } from "./App";
 
 function Search() {
     const [searchParams, setSearchParams] = useSearchParams();
     let searchString = searchParams.get("search")    
     const fetchPopular = async ()=> {
-        const response = await fetch("search?search=" + searchString);
+        const response = await fetch(serverPath +"search?search=" + searchString);
         return response.json();
       }
     const {data, status} = useQuery('search', fetchPopular);

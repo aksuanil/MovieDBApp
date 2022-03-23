@@ -6,6 +6,7 @@ import MovieMain from './components/MovieMain';
 import ActorSection from "./components/ActorSection";
 import Loader from "./components/Loader";
 import Footer from "./components/Footer";
+import { serverPath } from "./App";
 
 export const DataContext = React.createContext();
 
@@ -15,7 +16,7 @@ export default function Movies() {
     const [loading, setLoading] = useState(false);
     useEffect(() => {
         setLoading(true);
-        fetch("/movies/" + id)
+        fetch(serverPath +"movies/" + id)
           .then((res) => res.json())
           .then((data) => {
             setData(data);

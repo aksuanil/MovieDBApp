@@ -1,5 +1,4 @@
 {
-  "proxy": "https://moviedb-app-server.herokuapp.com/",
   "dependencies": {
     "create-react-app": "^1.2.1",
     "flowbite": "^1.3.4",
