@@ -10,7 +10,7 @@ function Search() {
     const [searchParams, setSearchParams] = useSearchParams();
     let searchString = searchParams.get("search")    
     const fetchPopular = async ()=> {
-        const response = await fetch(serverPath +"search?search=" + searchString);
+        const response = await fetch(`${serverPath}search?search=${searchString}`);
         return response.json();
       }
     const {data, status} = useQuery('search', fetchPopular);

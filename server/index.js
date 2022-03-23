@@ -5,7 +5,7 @@ import searchRouter from './routes/search.js';
 import topratedRouter from './routes/toprated.js';
 import { dirname } from 'path';
 import { fileURLToPath } from 'url';
-import path from 'path';
+import cors from 'cors'
 
 const app = express();
 
@@ -13,7 +13,7 @@ const popularMoviesApiKey = "https://api.themoviedb.org/3/movie/popular?api_key=
 const PORT = process.env.PORT || 5000;
 
 app.use('/dist', express.static('dist'));
-
+app.use(cors())
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
 
