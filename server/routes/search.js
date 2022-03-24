@@ -8,9 +8,9 @@ const searchMovieApiURI = "https://api.themoviedb.org/3/search/movie?api_key=946
 let searchResults = [];
 let apiDetailData = [];
 
-searchRouter.get('/', getMovieSearch,(req, res) => {
-    res.json({data : searchResults})
-    });
+searchRouter.get('/', getMovieSearch, (req, res) => {
+    res.json({ data: searchResults })
+});
 
 async function getMovieSearch(req, res, next) {
     searchResults = [];
@@ -24,7 +24,7 @@ async function getMovieSearch(req, res, next) {
         //     let movieId = nodes[i].id;
         //     await axios.get(`https://api.themoviedb.org/3/movie/${movieId}?api_key=946d32131d3e345d057d1d753c5c8a06&language=tr-TR`).then(response => {
         //         apiDetailData = response.data;
-        nodes.map( item => {
+        nodes.map(item => {
             let shortSentence = item.overview.split(".")[0]
             item.shortOverview = shortSentence;
             searchResults.push(item);
@@ -32,13 +32,13 @@ async function getMovieSearch(req, res, next) {
         next();
 
 
-        }
-        catch (error) {
+    }
+    catch (error) {
         res.status(400);
         res.send("Server Error")
         next();
     }
 };
 
-        
+
 export default searchRouter;

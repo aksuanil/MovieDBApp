@@ -22,24 +22,24 @@ export default function CategoryBar({getGenreId}) {
               <option>Tarih</option>
           </select>
         </div>
-      <ul class=" hidden rounded-lg divide-x-4 divide-gray-700 shadow sm:flex dark:divide-gray-700">
+      <ul class=" hidden rounded-lg divide-x-4 divide-gray-700 shadow sm:flex dark:divide-gray-700 font-bold">
           <li class="w-full">
-              <a onClick={function(event){ getGenreId(28); setActive(1)}} href="#" className={`inline-block relative py-4 px-4 w-full text-sm font-medium text-center text-gray-900 hover:text-gray-50 dark:hover:bg-gray-700 ${active === 1 ? 'dark:text-white dark:bg-gray-700 ' : 'dark:bg-gray-800 dark:text-gray-400 '}`} aria-current="page">Aksiyon</a>
+              <a onClick={function(event){ getGenreId(28); setActive(1)}} href="#" className={`inline-block relative py-4 px-4 w-full text-sm text-center text-gray-900 hover:text-gray-50 dark:hover:bg-gray-700 ${active === 1 ? 'dark:text-white dark:bg-gray-700 ' : 'dark:bg-gray-800 dark:text-gray-400 '}`} aria-current="page">Aksiyon</a>
           </li>
           <li class="w-full">
-              <a onClick={function(event){ getGenreId(35); setActive(2)}} href="#" className={`inline-block relative py-4 px-4 w-full text-sm font-medium text-center text-gray-900 hover:text-gray-50 dark:hover:bg-gray-700 ${active === 2 ? 'dark:text-white dark:bg-gray-700 ' : 'dark:bg-gray-800 dark:text-gray-400 '}`}>Komedi</a>
+              <a onClick={function(event){ getGenreId(35); setActive(2)}} href="#" className={`inline-block relative py-4 px-4 w-full text-sm text-center text-gray-900 hover:text-gray-50 dark:hover:bg-gray-700 ${active === 2 ? 'dark:text-white dark:bg-gray-700 ' : 'dark:bg-gray-800 dark:text-gray-400 '}`}>Komedi</a>
           </li>
           <li class="w-full">
-              <a onClick={function(event){ getGenreId(18); setActive(3)}} href="#" className={`inline-block relative py-4 px-4 w-full text-sm font-medium text-center text-gray-900 hover:text-gray-50 dark:hover:bg-gray-700 ${active === 3 ? 'dark:text-white dark:bg-gray-700 ' : 'dark:bg-gray-800 dark:text-gray-400 '}`}>Drama</a>
+              <a onClick={function(event){ getGenreId(18); setActive(3)}} href="#" className={`inline-block relative py-4 px-4 w-full text-sm text-center text-gray-900 hover:text-gray-50 dark:hover:bg-gray-700 ${active === 3 ? 'dark:text-white dark:bg-gray-700 ' : 'dark:bg-gray-800 dark:text-gray-400 '}`}>Drama</a>
           </li>
           <li class="w-full">
-              <a onClick={function(event){ getGenreId(27); setActive(4)}} href="#" className={`inline-block relative py-4 px-4 w-full text-sm font-medium text-center text-gray-900 hover:text-gray-50 dark:hover:bg-gray-700 ${active === 4 ? 'dark:text-white dark:bg-gray-700 ' : 'dark:bg-gray-800 dark:text-gray-400 '}`}>Korku</a>
+              <a onClick={function(event){ getGenreId(27); setActive(4)}} href="#" className={`inline-block relative py-4 px-4 w-full text-sm text-center text-gray-900 hover:text-gray-50 dark:hover:bg-gray-700 ${active === 4 ? 'dark:text-white dark:bg-gray-700 ' : 'dark:bg-gray-800 dark:text-gray-400 '}`}>Korku</a>
           </li>
           <li class="w-full">
-              <a onClick={function(event){ getGenreId(878); setActive(5)}} href="#" className={`inline-block relative py-4 px-4 w-full text-sm font-medium text-center text-gray-900 hover:text-gray-50 dark:hover:bg-gray-700 ${active === 5 ? 'dark:text-white dark:bg-gray-700 ' : 'dark:bg-gray-800 dark:text-gray-400 '}`}>Bilim-Kurgu</a>
+              <a onClick={function(event){ getGenreId(878); setActive(5)}} href="#" className={`inline-block relative py-4 px-4 w-full text-sm text-center text-gray-900 hover:text-gray-50 dark:hover:bg-gray-700 ${active === 5 ? 'dark:text-white dark:bg-gray-700 ' : 'dark:bg-gray-800 dark:text-gray-400 '}`}>Bilim-Kurgu</a>
           </li>
           <li class="w-full">
-              <a onClick={function(event){ getGenreId(36); setActive(6)}} href="#" className={` inline-block relative py-4 px-4 w-full text-sm font-medium text-center text-gray-900 hover:text-gray-50 dark:hover:bg-gray-700 ${active === 6 ? 'dark:text-white dark:bg-gray-700 ' : 'dark:bg-gray-800 dark:text-gray-400 '}`}>Tarih</a>
+              <a onClick={function(event){ getGenreId(36); setActive(6)}} href="#" className={` inline-block relative py-4 px-4 w-full text-sm text-center text-gray-900 hover:text-gray-50 dark:hover:bg-gray-700 ${active === 6 ? 'dark:text-white dark:bg-gray-700 ' : 'dark:bg-gray-800 dark:text-gray-400 '}`}>Tarih</a>
           </li>
       </ul>
       
