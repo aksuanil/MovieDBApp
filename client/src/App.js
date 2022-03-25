@@ -5,7 +5,8 @@ import HomePage from "./HomePage"
 import Movies from "./Movies"
 import Search from "./Search"
 import About from "./About"
-import sanspro from 'typeface-source-sans-pro'
+import 'typeface-source-sans-pro'
+import 'flowbite'
 
 
 function App() {

@@ -2,6 +2,8 @@ import React from 'react'
 import '../dist/flowbite.css';
 import logo from '../img/logo.png'
 import textLogo from '../img/logo-text.png'
+import SignupPopup from './SignupPopup';
+import SigninPopup from './SigninPopup';
 
 export default function Header() {
   return (
@@ -35,6 +37,14 @@ export default function Header() {
         </li>
         <li>
             <a href="/about" className="text-base block py-2 pr-4 pl-3 text-gray-700 border-b border-gray-100 hover:bg-gray-50 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 md:dark:hover:text-white dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">Hakkında</a>
+        </li>
+        <li>
+            <a href="#" className="text-base block py-2 pr-4 pl-3 text-gray-700 border-b border-gray-100 hover:bg-gray-50 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 md:dark:hover:text-white dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700" data-modal-toggle="signup-modal">Üye Ol</a>
+        <SignupPopup/>
+        </li>
+        <li>
+            <a href="#" className="text-base block py-2 pr-4 pl-3 text-gray-700 border-b border-gray-100 hover:bg-gray-50 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 md:dark:hover:text-white dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700"data-modal-toggle="signin-modal">Giriş Yap</a>
+        <SigninPopup/>
         </li>
         <li>
             {/* <a href="/search" className="text-base block py-2 pr-4 pl-3 text-gray-700 border-b border-gray-100 hover:bg-gray-50 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-gray-400 md:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">Services</a> */}
