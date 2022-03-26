@@ -8,9 +8,6 @@ export default function MovieMain() {
   const data = useContext(DataContext)
   return (
 <div>
-  <div className="bg-black bg-cover bg-[center_bottom_21rem] lg:bg-[center_bottom_32rem] w-full h-96 align-top absolute top-0 left-0 -z-10 brightness-[0.35] shadow-2xl shadow-slate-500" style={{ 
-      backgroundImage: `url(${'https://www.themoviedb.org/t/p/original' + data.dataDetail?.backdrop_path})`
-    }} />
     <div className="flex flex-wrap flex-row lg:rounded-3xl lg:w-full justify-center lg:justify-start ">
       <img className="rounded-2xl w-[15rem] h-fit shadow-lg shadow-slate-500" src={"https://www.themoviedb.org/t/p/w600_and_h900_bestv2" + data.dataDetail?.poster_path} /> 
       <div className="w-9/12 text-black lg:justify-start">

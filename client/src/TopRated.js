@@ -16,6 +16,7 @@ function TopRated() {
     return (
         <>
             <Header />
+            <div className="bg-gradient-to-bl from-gray-700 via-gray-900 to-black">
             {status === 'loading' && (
                 <Loader />
             )}
@@ -23,9 +24,10 @@ function TopRated() {
                 <div>Error fetching data</div>
             )}
             {status === 'success' && (
-                <MovieGrid data={data.data} />
+                <MovieGrid data={data.data.results} />
             )}
             <Footer />
+            </div>
         </>
     )
 }
