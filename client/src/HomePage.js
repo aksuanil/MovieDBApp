@@ -30,9 +30,10 @@ export default function HomePage() {
     // fetchGenre(id);
   }
     return (
-    <div className="bg-gradient-to-bl from-gray-700 via-gray-900 to-black">
+      <>
           <Header/>
           <CategoryBar getGenreId={getGenreId}/>
+          <div className="bg-gradient-to-bl from-gray-700 via-gray-900 to-black">
             {status === 'loading' && page === 'popular' && (
               <Loader/>
             )}
@@ -54,5 +55,6 @@ export default function HomePage() {
             )}
           <Footer/>
     </div>
+    </>
     )
 }

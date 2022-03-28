@@ -16,6 +16,7 @@ function TopRated() {
     return (
         <div className="bg-gradient-to-bl from-gray-700 via-gray-900 to-black">
             <Header />
+            <div className="bg-gradient-to-bl from-gray-700 via-gray-900 to-black">
             {status === 'loading' && (
                 <Loader />
             )}
@@ -26,7 +27,12 @@ function TopRated() {
                 <MovieGrid data={data.data.results} />
             )}
             <Footer />
+<<<<<<< HEAD
         </div>
+=======
+            </div>
+        </>
+>>>>>>> bf3979892652629bf6015aa94e2f2d51e04041f4
     )
 }
 export default TopRated;

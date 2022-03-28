@@ -1,7 +1,6 @@
 import React, { useState } from 'react'
 import Header from './components/Header'
 import Footer from './components/Footer'
-import CustomPopup from './components/MailPopup';
 import MailPopup from './components/MailPopup';
 
 export default function About() {
