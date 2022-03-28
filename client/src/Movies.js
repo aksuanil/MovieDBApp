@@ -30,12 +30,6 @@ export default function Movies() {
   }, []);
   if (loading) {
     return (
-<<<<<<< HEAD
-      <>
-        <Header />
-        <Loader />
-      </>
-=======
         <>
         <DataContext.Provider value={arrays}>
         <Header/>
@@ -63,7 +57,6 @@ export default function Movies() {
           </div>
         </DataContext.Provider>
         </>
->>>>>>> bf3979892652629bf6015aa94e2f2d51e04041f4
     )
   };
   return (
