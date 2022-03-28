@@ -1,4 +1,5 @@
 server/moviedb-app-server
+client/node_modules/
 client/node_modules/.cache/
 client/node_modules/.cache/default-development/10.pack
 client/node_modules/.cache/default-development/11.pack
