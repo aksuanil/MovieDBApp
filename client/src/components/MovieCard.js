@@ -1,5 +1,5 @@
 import React from 'react'
-const genres = [
+export const genres = [
 {
 "id": 28,
 "name": "Action"
