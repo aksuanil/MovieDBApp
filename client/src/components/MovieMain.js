@@ -8,12 +8,7 @@ export default function MovieMain() {
   const data = useContext(DataContext)
   return (
 <div>
-<<<<<<< HEAD
     <div className="flex flex-wrap flex-row lg:rounded-3xl w-full justify-center xl:justify-start ">
-=======
-    <div className="flex flex-wrap flex-row lg:rounded-3xl lg:w-full justify-center lg:justify-start ">
-      {/* h-fit safari bozuk */}
->>>>>>> 6f07335b851b3f04d0dc0c2421b647ea6f9b0b88
       <img className="rounded-2xl w-[15rem] h-fit shadow-lg shadow-slate-500" src={"https://www.themoviedb.org/t/p/w600_and_h900_bestv2" + data.dataDetail?.poster_path} /> 
       <div className="w-9/12 text-black justify-center lg:justify-start">
           <div className="flex flex-row mt-3 m-auto xl:m-0 justify-center xl:justify-start">
