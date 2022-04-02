@@ -1,2 +1,5 @@
-/server/moviedb-app-server
-/client/node_modules/.cache/
+server/moviedb-app-server
+client/node_modules/
+client/src/dist
+client/node_modules/.cache
+**/node_modules

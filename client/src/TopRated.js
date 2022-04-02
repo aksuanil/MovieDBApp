@@ -14,7 +14,7 @@ function TopRated() {
     }
     const { data, status } = useQuery('popular', fetchTopRated);
     return (
-        <>
+        <div className="bg-gradient-to-bl from-gray-700 via-gray-900 to-black">
             <Header />
             <div className="bg-gradient-to-bl from-gray-700 via-gray-900 to-black">
             {status === 'loading' && (
@@ -28,7 +28,8 @@ function TopRated() {
             )}
             <Footer />
             </div>
-        </>
+        </div>
     )
 }
+
 export default TopRated;
