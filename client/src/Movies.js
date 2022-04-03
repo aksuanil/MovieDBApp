@@ -42,10 +42,10 @@ export default function Movies() {
     <>
       <Header />
       <DataContext.Provider value={arrays}>
-        <div className="bg-gray-100 -z-30 relative">
+        <div className="bg-gray-100 relative z-20">
           {/* TODO reduce image res */}
           <div
-            className="bg-black bg-cover bg-center lg:bg-[center_bottom_32rem] w-[100vw] max-w-full h-[19rem] align-top absolute top-0 left-0 -z-20 brightness-[0.35] shadow-2xl shadow-slate-500"
+            className="bg-black bg-cover bg-center lg:bg-[center_bottom_32rem] w-[100vw] max-w-full h-[19rem] align-top absolute top-0 left-0 -z-10 brightness-[0.35] shadow-2xl shadow-slate-500"
             style={{
               backgroundImage: `url(${
                 "https://www.themoviedb.org/t/p/original" +
@@ -53,7 +53,7 @@ export default function Movies() {
               })`,
             }}
           ></div>
-          <div className="flex flex-wrap flex-col w-full sm:w-9/12 xl:w-9/12 sm:m-auto pt-32 sm:pt-48">
+          <div className="flex flex-wrap flex-col w-full sm:w-9/12 xl:w-9/12 sm:m-auto pt-32 sm:pt-48 z-10">
             <MovieMain data={arrays} />
             <div className="flex flex-col items-center xl:items-start">
               <h1 className="w-full xl:9/12 text-center xl:text-left mt-12 tracking-wide border-b-2 pb-[2px] border-slate-400 md:border-slate-300">

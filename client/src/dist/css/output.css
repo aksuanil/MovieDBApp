@@ -666,16 +666,6 @@ input[type=file]::file-selector-button:hover {
   visibility: hidden;
 }
 
-[role="tab"].active,[role="tab"].active:hover {
-  color: #1C64F2;
-  border-color: #1C64F2;
-}
-
-.dark [role="tab"].active,.dark [role="tab"].active:hover {
-  color: #1C64F2;
-  border-color: #1C64F2;
-}
-
 *, ::before, ::after {
   --tw-translate-x: 0;
   --tw-translate-y: 0;
@@ -823,12 +813,16 @@ input[type=file]::file-selector-button:hover {
   top: 0.75rem;
 }
 
-.-z-30 {
-  z-index: -30;
+.z-20 {
+  z-index: 20;
 }
 
-.-z-20 {
-  z-index: -20;
+.-z-10 {
+  z-index: -10;
+}
+
+.z-10 {
+  z-index: 10;
 }
 
 .z-50 {
@@ -1115,6 +1109,10 @@ input[type=file]::file-selector-button:hover {
   width: 75%;
 }
 
+.w-1\/6 {
+  width: 16.666667%;
+}
+
 .w-4\/6 {
   width: 66.666667%;
 }
@@ -1125,18 +1123,6 @@ input[type=file]::file-selector-button:hover {
 
 .w-1\/2 {
   width: 50%;
-}
-
-.w-2\/6 {
-  width: 33.333333%;
-}
-
-.w-1\/6 {
-  width: 16.666667%;
-}
-
-.w-screen {
-  width: 100vw;
 }
 
 .max-w-lg {
@@ -1498,11 +1484,6 @@ input[type=file]::file-selector-button:hover {
 
 .bg-white\/50 {
   background-color: rgb(255 255 255 / 0.5);
-}
-
-.bg-slate-100 {
-  --tw-bg-opacity: 1;
-  background-color: rgb(241 245 249 / var(--tw-bg-opacity));
 }
 
 .bg-opacity-70 {
@@ -2272,8 +2253,8 @@ input[type=file]::file-selector-button:hover {
     width: 75%;
   }
 
-  .sm\:w-28 {
-    width: 7rem;
+  .sm\:w-24 {
+    width: 6rem;
   }
 
   .sm\:w-36 {
@@ -2282,10 +2263,6 @@ input[type=file]::file-selector-button:hover {
 
   .sm\:w-full {
     width: 100%;
-  }
-
-  .sm\:w-24 {
-    width: 6rem;
   }
 
   .sm\:grid-cols-3 {
@@ -2396,10 +2373,6 @@ input[type=file]::file-selector-button:hover {
     flex-direction: row;
   }
 
-  .md\:items-start {
-    align-items: flex-start;
-  }
-
   .md\:items-center {
     align-items: center;
   }
@@ -2439,10 +2412,6 @@ input[type=file]::file-selector-button:hover {
     padding: 0.25rem;
   }
 
-  .md\:text-left {
-    text-align: left;
-  }
-
   .md\:text-sm {
     font-size: 0.875rem;
     line-height: 1.25rem;
@@ -2470,10 +2439,6 @@ input[type=file]::file-selector-button:hover {
 @media (min-width: 1024px) {
   .lg\:ml-8 {
     margin-left: 2rem;
-  }
-
-  .lg\:w-full {
-    width: 100%;
   }
 
   .lg\:grid-cols-5 {
@@ -2527,24 +2492,8 @@ input[type=file]::file-selector-button:hover {
     width: 75%;
   }
 
-  .xl\:w-3\/6 {
-    width: 50%;
-  }
-
-  .xl\:w-5\/12 {
-    width: 41.666667%;
-  }
-
   .xl\:w-6\/12 {
     width: 50%;
-  }
-
-  .xl\:w-4\/12 {
-    width: 33.333333%;
-  }
-
-  .xl\:w-3\/12 {
-    width: 25%;
   }
 
   .xl\:items-start {
@@ -2591,10 +2540,6 @@ input[type=file]::file-selector-button:hover {
 }
 
 @media (min-width: 1536px) {
-  .\32xl\:w-5\/12 {
-    width: 41.666667%;
-  }
-
   .\32xl\:w-4\/12 {
     width: 33.333333%;
   }
