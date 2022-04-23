@@ -1,24 +1,29 @@
-import React, { useEffect, useState } from "react";
-import { Route, Routes} from "react-router-dom";
-import TopRated from "./TopRated"
-import HomePage from "./HomePage"
-import Movies from "./Movies"
-import Search from "./Search"
-import About from "./About"
+import React from "react";
+import { Route, Routes } from "react-router-dom";
+import TopRated from "./pages/TopRated"
+import HomePage from "./pages/HomePage"
+import Movies from "./pages/Movies"
+import Search from "./pages/Search"
+import About from "./pages/About"
 import 'typeface-source-sans-pro'
 import 'flowbite'
+import './assets/css/output.css'
+import Header from "./components/Header";
+import Footer from "./components/Footer";
 
 
 function App() {
     return (
         <>
-        <Routes>
-            <Route path="/" element={<HomePage/>} />
-            <Route path="/toprated" element={<TopRated/>} />
-            <Route path="/search" element={<Search/>} />
-            <Route path="/about" element={<About/>} />
-            <Route path="/movies/:id" element={<Movies/>} />
-        </Routes>
+            <Header />
+            <Routes>
+                <Route path="/" element={<HomePage />} />
+                <Route path="/toprated" element={<TopRated />} />
+                <Route path="/search" element={<Search />} />
+                <Route path="/about" element={<About />} />
+                <Route path="/movies/:id" element={<Movies />} />
+            </Routes>
+            <Footer />
         </>
     )
 }

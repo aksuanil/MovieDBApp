@@ -1,12 +1,9 @@
-import React, { useEffect, useState, useCallback } from "react";
-import Header from "./components/Header";
-import { QueryClient, QueryClientProvider, useQuery } from "react-query"
-import MovieGrid from "./components/MovieGrid";
-import CategoryBar from "./components/CategoryBar";
-import { useParams } from "react-router-dom";
-import Loader from "./components/Loader";
-import Footer from "./components/Footer"
-import { serverPath } from "./App";
+import React, { useState} from "react";
+import { useQuery } from "react-query"
+import MovieGrid from "../components/MovieGrid";
+import CategoryBar from "../components/CategoryBar";
+import Loader from "../components/Loader";
+import { serverPath } from "../App";
 
 export default function HomePage() {
   const fetchPopular = async ()=> {
@@ -31,7 +28,6 @@ export default function HomePage() {
   }
     return (
       <>
-          <Header/>
           <CategoryBar getGenreId={getGenreId}/>
           <div className="bg-gradient-to-bl from-gray-700 via-gray-900 to-black">
             {status === 'loading' && page === 'popular' && (
@@ -53,7 +49,6 @@ export default function HomePage() {
             {teamsQuery.status === 'success' && page === 'others' && (
               <MovieGrid data={teamsQuery.data.data}/>
             )}
-          <Footer/>
     </div>
     </>
     )

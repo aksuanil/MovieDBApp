@@ -1,7 +1,7 @@
 import React from 'react'
-import '../dist/flowbite.css';
-import logo from '../img/logo.png'
-import textLogo from '../img/logo-text.png'
+import '../assets/dist/flowbite.css';
+import logo from '../assets/img/logo.png'
+import textLogo from '../assets/img/logo-text.png'
 import SignupPopup from './SignupPopup';
 import SigninPopup from './SigninPopup';
 

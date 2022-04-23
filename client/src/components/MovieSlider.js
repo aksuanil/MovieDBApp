@@ -1,5 +1,4 @@
 import React, {useState, useEffect} from 'react'
-import '../../src/dist/css/output.css'
 import Carousel from 'react-elastic-carousel';
 import { serverPath } from '../App';
 

@@ -1,12 +1,10 @@
 import React, { useEffect, useState } from "react";
-import Header from "./components/Header";
-import MovieSlider from "./components/MovieSlider";
+import MovieSlider from "../components/MovieSlider";
 import { useParams } from "react-router-dom";
-import MovieMain from "./components/MovieMain";
-import ActorSection from "./components/ActorSection";
-import Loader from "./components/Loader";
-import Footer from "./components/Footer";
-import { serverPath } from "./App";
+import MovieMain from "../components/MovieMain";
+import ActorSection from "../components/ActorSection";
+import Loader from "../components/Loader";
+import { serverPath } from "../App";
 import "flowbite";
 
 export const DataContext = React.createContext();
@@ -32,7 +30,6 @@ export default function Movies() {
   if (loading) {
     return (
       <>
-        <Header />
         <Loader />
       </>
     );
@@ -40,7 +37,6 @@ export default function Movies() {
 
   return (
     <>
-      <Header />
       <DataContext.Provider value={arrays}>
         <div className="bg-gray-100 relative z-20">
           {/* TODO reduce image res */}
@@ -53,7 +49,7 @@ export default function Movies() {
               })`,
             }}
           ></div>
-          <div className="flex flex-wrap flex-col w-full sm:w-9/12 xl:w-9/12 sm:m-auto pt-32 sm:pt-48 z-10">
+          <div className="flex flex-wrap flex-col w-full sm:w-9/12 sm:m-auto pt-32 sm:pt-48 z-10">
             <MovieMain data={arrays} />
             <div className="flex flex-col items-center xl:items-start">
               <h1 className="w-full xl:9/12 text-center xl:text-left mt-12 tracking-wide border-b-2 pb-[2px] border-slate-400 md:border-slate-300">
@@ -70,7 +66,6 @@ export default function Movies() {
           <div className="m-4">
             <MovieSlider movieId={id} />
           </div>
-          <Footer />
         </div>
       </DataContext.Provider>
     </>

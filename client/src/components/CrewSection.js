@@ -1,6 +1,6 @@
 import React, { useContext } from "react";
 import CrewCard from "./CrewCard";
-import { DataContext } from "../Movies";
+import { DataContext } from "../pages/Movies";
 
 export default function CrewSection(props) {
   const data = useContext(DataContext);

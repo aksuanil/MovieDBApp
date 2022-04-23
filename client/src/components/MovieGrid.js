@@ -1,5 +1,4 @@
-import React, {useState, useEffect} from 'react'
-import '../../src/dist/css/output.css'
+import React from 'react'
 import MovieCard from './MovieCard';
 
 export default function MovieGrid(props) {

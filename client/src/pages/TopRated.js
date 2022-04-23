@@ -1,10 +1,7 @@
-import React, { useEffect } from "react";
-import Footer from "./components/Footer";
-import Header from "./components/Header";
-import MovieGrid from "./components/MovieGrid";
-import Loader from "./components/Loader";
-
-import { serverPath } from './App'
+import React from "react";
+import MovieGrid from "../components/MovieGrid";
+import Loader from "../components/Loader";
+import { serverPath } from '../App'
 import { useQuery } from "react-query";
 
 function TopRated() {
@@ -15,7 +12,6 @@ function TopRated() {
     const { data, status } = useQuery('popular', fetchTopRated);
     return (
         <div className="bg-gradient-to-bl from-gray-700 via-gray-900 to-black">
-            <Header />
             <div className="bg-gradient-to-bl from-gray-700 via-gray-900 to-black">
             {status === 'loading' && (
                 <Loader />
@@ -26,7 +22,6 @@ function TopRated() {
             {status === 'success' && (
                 <MovieGrid data={data.data.results} />
             )}
-            <Footer />
             </div>
         </div>
     )

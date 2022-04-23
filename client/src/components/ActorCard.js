@@ -1,5 +1,5 @@
 import React from 'react'
-import personImg from '../img/person-placeholder.png'
+import personImg from '../assets/img/person-placeholder.png'
 
 export default function ActorCard(params) {
   return (

@@ -1,8 +1,7 @@
 import React, { useContext } from 'react'
-import '../../src/dist/css/output.css'
 import CrewSection from './CrewSection'
 import RatingStar from './RatingStar'
-import { DataContext } from '../Movies'
+import { DataContext } from '../pages/Movies'
 
 export default function MovieMain() {
   const data = useContext(DataContext)
@@ -11,7 +10,7 @@ export default function MovieMain() {
     <div className="flex flex-wrap flex-row lg:rounded-3xl w-full justify-center xl:justify-start ">
       <img className="rounded-2xl w-[15rem] h-fit shadow-lg shadow-slate-500" src={"https://www.themoviedb.org/t/p/w600_and_h900_bestv2" + data.dataDetail?.poster_path} /> 
       <div className="w-9/12 text-black justify-center lg:justify-start">
-          <div className="flex flex-row mt-3 m-auto xl:m-0 justify-center xl:justify-start">
+          <div className="flex flex-row mt-3 m-auto xl:m-0 justify-center lg:justify-start">
               <h3 className="text-center text-3xl xl:text-white lg:pl-8 font-semibold">{data.dataDetail?.title}</h3>
               <div className="flex items-center">
               <a href={"https://www.imdb.com/title/" + data.dataDetail?.imdb_id} target="_blank" className="flex items-center justify-center bg-yellow-400 h-8 w-14  md:h-[28px] md:w-14 rounded-md ml-4 pl-1 pr-1 font-bold">IMDb</a>

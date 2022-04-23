@@ -1,12 +1,9 @@
 import React, { useState } from 'react'
-import Header from './components/Header'
-import Footer from './components/Footer'
-import MailPopup from './components/MailPopup';
+import MailPopup from '../components/MailPopup';
 
 export default function About() {
 	return (
 		<>
-			<Header />
 			<div class="text-center py-12 px-6 mt-12">
 				<h1 class="font-display font-bold text-5xl mb-6">Bize Ulaşın</h1>
 				<p class="max-w-lg mx-auto">test</p>
@@ -48,9 +45,6 @@ export default function About() {
 					</div>
 				</div>
 			</div>
-
-			<Footer />
-
 		</>
 	)
 }
