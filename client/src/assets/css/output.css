@@ -1894,6 +1894,10 @@ input[type=file]::file-selector-button:hover {
   padding-top: 8rem;
 }
 
+.pt-4 {
+  padding-top: 1rem;
+}
+
 .text-left {
   text-align: left;
 }
@@ -2431,6 +2435,10 @@ input[type=file]::file-selector-button:hover {
     padding-top: 12rem;
   }
 
+  .sm\:pl-8 {
+    padding-left: 2rem;
+  }
+
   .sm\:text-center {
     text-align: center;
   }
@@ -2641,6 +2649,24 @@ input[type=file]::file-selector-button:hover {
     width: 50%;
   }
 
+  .xl\:w-8\/12 {
+    width: 66.666667%;
+  }
+
+  .xl\:w-10\/12 {
+    width: 83.333333%;
+  }
+
+  .xl\:w-fit {
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
+  }
+
+  .xl\:w-9\/12 {
+    width: 75%;
+  }
+
   .xl\:items-start {
     align-items: flex-start;
   }
@@ -2687,6 +2713,20 @@ input[type=file]::file-selector-button:hover {
 @media (min-width: 1536px) {
   .\32xl\:w-4\/12 {
     width: 33.333333%;
+  }
+
+  .\32xl\:w-6\/12 {
+    width: 50%;
+  }
+
+  .\32xl\:w-full {
+    width: 100%;
+  }
+
+  .\32xl\:w-fit {
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
   }
 }
 

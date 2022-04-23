@@ -16,8 +16,8 @@ export default function MovieMain() {
               <a href={"https://www.imdb.com/title/" + data.dataDetail?.imdb_id} target="_blank" className="flex items-center justify-center bg-yellow-400 h-8 w-14  md:h-[28px] md:w-14 rounded-md ml-4 pl-1 pr-1 font-bold">IMDb</a>
               </div>
           </div>
-          <div className="flex flex-row mt-2 justify-around xl:justify-start gap-4 xl:gap-8 xl:text-white  xl:ml-8 xl:w-6/12 2xl:w-4/12 xl:tracking-wide xl:border-b-2  xl:border-slate-500">
-            <p className="text-center xl:text-left tracking-wide border-b-2 border-slate-300 xl:border-transparent">
+          <div className="flex flex-row mt-2 justify-around xl:justify-start gap-4 xl:gap-8 xl:text-white xl:ml-8 xl:w-fit 2xl:w-fit xl:tracking-wide xl:border-b-2  xl:border-slate-500">
+            <p className="text-center xl:text-left tracking-wide border-b-2 border-slate-300 xl:border-transparent whitespace-nowrap">
               <p>              
                 {data.dataDetail?.genres?.slice(0, 2).map(item =>
                 item.name + " " 
@@ -25,9 +25,9 @@ export default function MovieMain() {
               </p>
             </p>
             <p className="text-center xl:text-left tracking-wide border-b-2 pb-[2px] w-1/6 border-slate-300 xl:border-transparent">{data.dataDetail?.vote_average}</p>
-            <p className="text-center xl:text-left tracking-wide border-b-2  border-slate-300 xl:border-transparent">{data.dataDetail?.runtime} dakika</p>
+            <p className="text-center xl:text-left tracking-wide border-b-2  border-slate-300 xl:border-transparent whitespace-nowrap">{data.dataDetail?.runtime} dakika</p>
           </div>
-          <div className='flex justify-center xl:justify-start pl-8 pt-3'>
+          <div className='flex justify-center xl:justify-start pt-3 sm:pl-8 '>
             <RatingStar data={data.dataDetail?.vote_average}/>
           </div>
           <div className="flex flex-row mt-4 xl:mt-[50px]">
