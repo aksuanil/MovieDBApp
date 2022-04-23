@@ -785,6 +785,11 @@ input[type=file]::file-selector-button:hover {
   position: relative;
 }
 
+.sticky {
+  position: -webkit-sticky;
+  position: sticky;
+}
+
 .inset-0 {
   top: 0px;
   right: 0px;
@@ -811,6 +816,18 @@ input[type=file]::file-selector-button:hover {
 
 .top-3 {
   top: 0.75rem;
+}
+
+.bottom-0 {
+  bottom: 0px;
+}
+
+.bottom-20 {
+  bottom: 5rem;
+}
+
+.bottom-52 {
+  bottom: 13rem;
 }
 
 .z-50 {
@@ -1041,12 +1058,140 @@ input[type=file]::file-selector-button:hover {
   height: 1rem;
 }
 
+.h-\[100vh\] {
+  height: 100vh;
+}
+
 .h-\[19rem\] {
   height: 19rem;
 }
 
+.h-\[90vh\] {
+  height: 90vh;
+}
+
+.h-\[80vh\] {
+  height: 80vh;
+}
+
+.h-\[75vh\] {
+  height: 75vh;
+}
+
+.h-max {
+  height: -webkit-max-content;
+  height: max-content;
+}
+
+.h-auto {
+  height: auto;
+}
+
+.h-min {
+  height: -webkit-min-content;
+  height: min-content;
+}
+
+.h-\[78vw\] {
+  height: 78vw;
+}
+
+.h-\[73vw\] {
+  height: 73vw;
+}
+
+.h-\[50vw\] {
+  height: 50vw;
+}
+
+.h-\[40vw\] {
+  height: 40vw;
+}
+
+.h-\[45vw\] {
+  height: 45vw;
+}
+
+.h-\[42vw\] {
+  height: 42vw;
+}
+
+.h-\[41vw\] {
+  height: 41vw;
+}
+
+.h-\[41\2c 5vw\] {
+  height: 41,5vw;
+}
+
+.h-\[41\.5vw\] {
+  height: 41.5vw;
+}
+
+.h-\[41\.7vw\] {
+  height: 41.7vw;
+}
+
+.h-\[41\.6vw\] {
+  height: 41.6vw;
+}
+
+.h-\[41\.6\.5vw\] {
+  height: 41.6.5vw;
+}
+
+.h-\[41\.65vw\] {
+  height: 41.65vw;
+}
+
+.h-\[72vh\] {
+  height: 72vh;
+}
+
+.h-\[78vh\] {
+  height: 78vh;
+}
+
+.h-\[77vh\] {
+  height: 77vh;
+}
+
+.h-\[77\.5vh\] {
+  height: 77.5vh;
+}
+
+.h-\[77\.65vh\] {
+  height: 77.65vh;
+}
+
+.h-\[77\.75vh\] {
+  height: 77.75vh;
+}
+
+.h-\[77\.8vh\] {
+  height: 77.8vh;
+}
+
+.max-h-1\.5 {
+  max-height: 0.375rem;
+}
+
+.max-h-1 {
+  max-height: 0.25rem;
+}
+
 .min-h-screen {
   min-height: 100vh;
+}
+
+.min-h-fit {
+  min-height: -webkit-fit-content;
+  min-height: -moz-fit-content;
+  min-height: fit-content;
+}
+
+.min-h-full {
+  min-height: 100%;
 }
 
 .w-24 {
@@ -1143,6 +1288,10 @@ input[type=file]::file-selector-button:hover {
 
 .max-w-full {
   max-width: 100%;
+}
+
+.flex-grow {
+  flex-grow: 1;
 }
 
 .grow {
@@ -2265,10 +2414,6 @@ input[type=file]::file-selector-button:hover {
     width: 75%;
   }
 
-  .sm\:w-5\/12 {
-    width: 41.666667%;
-  }
-
   .sm\:grid-cols-3 {
     grid-template-columns: repeat(3, minmax(0, 1fr));
   }
@@ -2494,14 +2639,6 @@ input[type=file]::file-selector-button:hover {
 
   .xl\:w-6\/12 {
     width: 50%;
-  }
-
-  .xl\:w-9\/12 {
-    width: 75%;
-  }
-
-  .xl\:w-5\/12 {
-    width: 41.666667%;
   }
 
   .xl\:items-start {
