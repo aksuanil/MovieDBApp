@@ -8,7 +8,7 @@ export default function CrewSection(props) {
   return (
     <>
       <div className="">
-        <p className="font-medium mb-3 text-center lg:text-left border-b-2 pb-[2px] border-slate-400 md:border-slate-300">
+        <p className="font-semibold mb-3 text-center lg:text-left border-b-2 pb-[2px] border-slate-400 md:border-slate-300">
           Yönetmen
         </p>
         <CrewCard data={props.data?.director[0]} />
@@ -16,7 +16,7 @@ export default function CrewSection(props) {
 
       <div className="">
         {props.data?.screenplay[0] ? (
-          <p className="font-medium mb-3 text-center lg:text-left border-b-2 pb-[2px] border-slate-400 md:border-slate-300">
+          <p className="font-semibold mb-3 text-center lg:text-left border-b-2 pb-[2px] border-slate-400 md:border-slate-300">
             Senarist
           </p>
         ) : (
@@ -31,7 +31,7 @@ export default function CrewSection(props) {
 
       <div className="">
         {props.data?.writer[0] ? (
-          <p className="font-medium mb-3 text-center lg:text-left border-b-2 pb-[2px] border-slate-400 md:border-slate-300">
+          <p className="font-semibold mb-3 text-center lg:text-left border-b-2 pb-[2px] border-slate-400 md:border-slate-300">
             <p className="">Yazar</p>
           </p>
         ) : (
